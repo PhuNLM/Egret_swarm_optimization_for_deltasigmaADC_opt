@@ -1,4 +1,5 @@
-Source codes and libraries of my gradute thesis
+Source codes and libraries of my gradute thesis.
+All the details about the algorithm and my ADC topology you can read more in my thesis report.
 
 # Tutorial
 
