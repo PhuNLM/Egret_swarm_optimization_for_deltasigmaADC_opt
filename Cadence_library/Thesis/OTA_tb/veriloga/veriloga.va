@@ -1,0 +1,9 @@
+// VerilogA for Thesis, OTA_tb, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module OTA_tb;
+
+
+endmodule

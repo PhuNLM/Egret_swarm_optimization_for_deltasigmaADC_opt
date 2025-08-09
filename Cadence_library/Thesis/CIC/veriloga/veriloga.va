@@ -1,0 +1,142 @@
+// VerilogA for Thesis, CIC, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module CIC(clk_in, rst_n, data_in, data_valid_in, data_out, data_valid_out, clk_out);
+
+// Port declarations
+input clk_in, rst_n, data_valid_in;
+input [11:0] data_in;
+output [23:0] data_out;
+output data_valid_out, clk_out;
+
+// Electrical discipline
+electrical clk_in, rst_n, data_valid_in, data_valid_out, clk_out;
+electrical [11:0] data_in;
+electrical [23:0] data_out;
+
+// Parameters
+parameter real DECIMATION = 32;
+parameter integer ORDER = 3;
+
+// Internal variables
+integer decim_counter;
+electrical integrator1, integrator2, integrator3;
+integer delay_line[0:31];  // 32-element delay line
+integer delay_ptr;
+integer comb1, comb2, comb3;
+integer comb1_delayed, comb2_delayed, comb3_delayed;
+integer clk_div_state;
+real clk_out_val, data_valid_out_val;
+integer data_out_int;
+integer i;
+
+// Analog behavior
+analog begin
+    
+    // Initialize on reset
+    @(cross(V(rst_n) - 0.5, -1)) begin
+        decim_counter = 0;
+
+        delay_ptr = 0;
+        comb1 = 0;
+        comb2 = 0;
+        comb3 = 0;
+        comb1_delayed = 0;
+        comb2_delayed = 0;
+        comb3_delayed = 0;
+        clk_div_state = 0;
+        data_out_int = 0;
+        data_valid_out_val = 0;
+        clk_out_val = 0;
+        
+        for (i = 0; i < 32; i = i + 1) begin
+            delay_line[i] = 0;
+        end
+    end
+    
+    // Clock divider and integrator section
+    @(cross(V(clk_in) - 0.5, +1)) begin
+        if (V(rst_n) > 0.5) begin
+            // Clock divider
+            decim_counter = decim_counter + 1;
+            if (decim_counter >= DECIMATION) begin
+                decim_counter = 0;
+                clk_div_state = !clk_div_state;
+                clk_out_val = clk_div_state;
+            end
+            
+            // Integrator stages (running at input clock rate)
+            if (V(data_valid_in) > 0.5) begin
+                // Sign extend 12-bit input to 24-bit
+                if (V(data_in[11]) > 0.5) begin
+                    integrator1 = integrator1 + (V(data_in) - 4096); // 2^12
+                end else begin
+                    integrator1 = integrator1 + V(data_in);
+                end
+                
+                integrator2 = integrator2 + integrator1;
+                integrator3 = integrator3 + integrator2;
+            end
+            
+            // Update delay line at decimated rate
+            if (V(data_valid_in) > 0.5 && decim_counter == 0) begin
+                delay_line[delay_ptr] = integrator3;
+                delay_ptr = (delay_ptr + 1) % 32;
+            end
+        end
+    end
+    
+    // Comb section (running at decimated clock rate)
+    @(cross(clk_out_val - 0.5, +1)) begin
+        if (V(rst_n) > 0.5) begin
+            // First comb stage
+            comb1 = integrator3 - delay_line[delay_ptr];
+            comb1_delayed = comb1;
+            
+            // Second comb stage
+            comb2 = comb1 - comb1_delayed;
+            comb2_delayed = comb2;
+            
+            // Third comb stage
+            comb3 = comb2 - comb2_delayed;
+            
+            // Output
+            data_out_int = comb3;
+            data_valid_out_val = 1.0;
+        end
+    end
+    
+    // Output assignments
+    V(clk_out) <+ transition(clk_out_val, 0, 1n);
+    V(data_valid_out) <+ transition(data_valid_out_val, 0, 1n);
+    
+    // Convert integer to bus output
+    V(data_out[23]) <+ transition((data_out_int < 0) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[22]) <+ transition(((abs(data_out_int) >> 22) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[21]) <+ transition(((abs(data_out_int) >> 21) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[20]) <+ transition(((abs(data_out_int) >> 20) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[19]) <+ transition(((abs(data_out_int) >> 19) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[18]) <+ transition(((abs(data_out_int) >> 18) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[17]) <+ transition(((abs(data_out_int) >> 17) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[16]) <+ transition(((abs(data_out_int) >> 16) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[15]) <+ transition(((abs(data_out_int) >> 15) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[14]) <+ transition(((abs(data_out_int) >> 14) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[13]) <+ transition(((abs(data_out_int) >> 13) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[12]) <+ transition(((abs(data_out_int) >> 12) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[11]) <+ transition(((abs(data_out_int) >> 11) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[10]) <+ transition(((abs(data_out_int) >> 10) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[9]) <+ transition(((abs(data_out_int) >> 9) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[8]) <+ transition(((abs(data_out_int) >> 8) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[7]) <+ transition(((abs(data_out_int) >> 7) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[6]) <+ transition(((abs(data_out_int) >> 6) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[5]) <+ transition(((abs(data_out_int) >> 5) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[4]) <+ transition(((abs(data_out_int) >> 4) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[3]) <+ transition(((abs(data_out_int) >> 3) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[2]) <+ transition(((abs(data_out_int) >> 2) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[1]) <+ transition(((abs(data_out_int) >> 1) & 1) ? 1.0 : 0.0, 0, 1n);
+    V(data_out[0]) <+ transition((abs(data_out_int) & 1) ? 1.0 : 0.0, 0, 1n);
+end
+
+endmodule

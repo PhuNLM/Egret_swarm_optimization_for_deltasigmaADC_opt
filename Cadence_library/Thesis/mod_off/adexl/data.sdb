@@ -1,0 +1,1072 @@
+<?xml version="1.0"?>
+<setupdb version="5">data
+	<active>Active Setup
+		<corners>
+			<corner enabled="1">_default</corner>
+			<corner enabled="1">TTNN
+				<vars>
+					<var>temperature
+						<value>25</value>
+					</var>
+				</vars>
+				<models>
+					<model enabled="0">toplevel.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+						<modelsection>"tt_lib"</modelsection>
+					</model>
+				</models>
+			</corner>
+			<corner enabled="1">FFHH
+				<vars>
+					<var>temperature
+						<value>135</value>
+					</var>
+				</vars>
+				<models>
+					<model enabled="0">toplevel.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+						<modelsection>"ff_lib"</modelsection>
+					</model>
+				</models>
+			</corner>
+			<corner enabled="1">FFHL
+				<vars>
+					<var>temperature
+						<value>-40</value>
+					</var>
+				</vars>
+				<models>
+					<model enabled="0">toplevel.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+						<modelsection>"ff_lib"</modelsection>
+					</model>
+				</models>
+			</corner>
+			<corner enabled="1">SSLL
+				<vars>
+					<var>temperature
+						<value>-40</value>
+					</var>
+				</vars>
+				<models>
+					<model enabled="0">toplevel.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+						<modelsection>"ss_lib"</modelsection>
+					</model>
+				</models>
+			</corner>
+			<corner enabled="1">SSLH
+				<vars>
+					<var>temperature
+						<value>135</value>
+					</var>
+				</vars>
+				<models>
+					<model enabled="0">toplevel.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+						<modelsection>"ss_lib"</modelsection>
+					</model>
+				</models>
+			</corner>
+		</corners>
+		<extensions>
+			<extension>Parasitics
+				<callback>_parSetupDBExtensionCB</callback>
+				<iconvalue></iconvalue>
+				<icontype></icontype>
+			</extension>
+		</extensions>
+		<currentmode>Single Run, Sweeps and Corners</currentmode>
+		<overwritehistory>0</overwritehistory>
+		<tests>
+			<test enabled="1">Thesis:mod_off:1
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>mod_off</value>
+					</option>
+					<option>lib
+						<value>Thesis</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>Thesis:mod_off:1_active</value>
+					</option>
+				</tooloptions>
+				<outputs>
+					<output>psd
+						<evalType>point</evalType>
+					</output>
+					<output>enob
+						<evalType>point</evalType>
+					</output>
+					<output>snr
+						<evalType>point</evalType>
+					</output>
+				</outputs>
+				<origoptions>
+					<option>cell
+						<value>mod_off</value>
+					</option>
+					<option>lib
+						<value>Thesis</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+		</tests>
+		<overwritehistoryname>Interactive.0</overwritehistoryname>
+		<plottingoptions>
+			<plottingoption>plottype
+				<value>None</value>
+			</plottingoption>
+			<plottingoption>usewaveformtemplate
+				<value>no</value>
+			</plottingoption>
+			<plottingoption>waveformtemplate
+				<value></value>
+			</plottingoption>
+		</plottingoptions>
+		<vars>
+			<var>C
+				<value>820p</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Cc_1
+				<value>528.4f</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>F
+				<value>20K</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>LM12345_1
+				<value>520n</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>LM68_1
+				<value>520n</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>LM79_1
+				<value>520n</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>LMN8_1
+				<value>520n</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>LMP1_1
+				<value>520n</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>LMP2_1
+				<value>520n</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>LMP5_1
+				<value>520n</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>OSR
+				<value>128</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>R
+				<value>1k</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>WM12345_1
+				<value>2.8u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>WM68_1
+				<value>15u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>WM79_1
+				<value>9.732u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>WMN8_1
+				<value>80u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>WMP1_1
+				<value>9.732u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>WMP2_1
+				<value>9.732u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>WMP5_1
+				<value>37u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
+		<allcornersenabled>1</allcornersenabled>
+	</active>
+	<history>History
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.0
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">TTNN
+						<vars>
+							<var>temperature
+								<value>25</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"tt_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">FFHH
+						<vars>
+							<var>temperature
+								<value>135</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ff_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">FFHL
+						<vars>
+							<var>temperature
+								<value>-40</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ff_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">SSLL
+						<vars>
+							<var>temperature
+								<value>-40</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ss_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">SSLH
+						<vars>
+							<var>temperature
+								<value>135</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ss_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">Thesis:mod_off:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>mod_off</value>
+							</option>
+							<option>lib
+								<value>Thesis</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Thesis:mod_off:1_none_Interactive.0</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>psd
+								<evalType>point</evalType>
+							</output>
+							<output>enob
+								<evalType>point</evalType>
+							</output>
+							<output>snr
+								<evalType>point</evalType>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>mod_off</value>
+							</option>
+							<option>lib
+								<value>Thesis</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>C
+						<value>820p</value>
+					</var>
+					<var>Cc_1
+						<value>528.4f</value>
+					</var>
+					<var>F
+						<value>20K</value>
+					</var>
+					<var>LM12345_1
+						<value>520n</value>
+					</var>
+					<var>LM68_1
+						<value>520n</value>
+					</var>
+					<var>LM79_1
+						<value>520n</value>
+					</var>
+					<var>LMN8_1
+						<value>520n</value>
+					</var>
+					<var>LMP1_1
+						<value>520n</value>
+					</var>
+					<var>LMP2_1
+						<value>520n</value>
+					</var>
+					<var>LMP5_1
+						<value>520n</value>
+					</var>
+					<var>OSR
+						<value>128</value>
+					</var>
+					<var>R
+						<value>1k</value>
+					</var>
+					<var>WM12345_1
+						<value>2.8u</value>
+					</var>
+					<var>WM68_1
+						<value>15u</value>
+					</var>
+					<var>WM79_1
+						<value>9.732u</value>
+					</var>
+					<var>WMN8_1
+						<value>80u</value>
+					</var>
+					<var>WMP1_1
+						<value>9.732u</value>
+					</var>
+					<var>WMP2_1
+						<value>12u</value>
+					</var>
+					<var>WMP5_1
+						<value>37u</value>
+					</var>
+				</vars>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Apr 18 20:36:06 2025</timestamp>
+			<resultsname>/home/hoangtrang/Thu_vien_PDK/ALL_PDK/Thesis/mod_off/adexl/results/data/Interactive.0.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.0.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/work-eda_hoangtrang_203606863</localpsfdir>
+			<psfdir>/home/disk/simulation/SIM_IC61/Thesis/mod_off/adexl/results/data/Interactive.0</psfdir>
+			<simdir>$AXL_PROJECT_DIR/Thesis/mod_off/adexl/results/data/Interactive.0</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/hoangtrang/Thu_vien_PDK/ALL_PDK/Thesis/mod_off/adexl/results/data/Interactive.0.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.0.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.1
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">TTNN
+						<vars>
+							<var>temperature
+								<value>25</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"tt_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">FFHH
+						<vars>
+							<var>temperature
+								<value>135</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ff_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">FFHL
+						<vars>
+							<var>temperature
+								<value>-40</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ff_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">SSLL
+						<vars>
+							<var>temperature
+								<value>-40</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ss_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">SSLH
+						<vars>
+							<var>temperature
+								<value>135</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ss_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">Thesis:mod_off:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>mod_off</value>
+							</option>
+							<option>lib
+								<value>Thesis</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Thesis:mod_off:1_none_Interactive.1</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>psd
+								<evalType>point</evalType>
+							</output>
+							<output>enob
+								<evalType>point</evalType>
+							</output>
+							<output>snr
+								<evalType>point</evalType>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>mod_off</value>
+							</option>
+							<option>lib
+								<value>Thesis</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>C
+						<value>820p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc_1
+						<value>528.4f</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>F
+						<value>20K</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LM12345_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LM68_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LM79_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMN8_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMP1_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMP2_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMP5_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>OSR
+						<value>128</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>1k</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WM12345_1
+						<value>2.8u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WM68_1
+						<value>15u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WM79_1
+						<value>9.732u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMN8_1
+						<value>80u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMP1_1
+						<value>9.732u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMP2_1
+						<value>9.732u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMP5_1
+						<value>37u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<allcornersenabled>0</allcornersenabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Wed Apr 23 03:09:08 2025
+</timestamp>
+			<resultsname>/home/hoangtrang/Thu_vien_PDK/ALL_PDK/Thesis/mod_off/adexl/results/data/Interactive.1.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.1.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/work-eda_hoangtrang_030908895</localpsfdir>
+			<psfdir>/home/disk/simulation/SIM_IC61/Thesis/mod_off/adexl/results/data/Interactive.1</psfdir>
+			<simdir>$AXL_PROJECT_DIR/Thesis/mod_off/adexl/results/data/Interactive.1</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/hoangtrang/Thu_vien_PDK/ALL_PDK/Thesis/mod_off/adexl/results/data/Interactive.1.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.1.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.2
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">TTNN
+						<vars>
+							<var>temperature
+								<value>25</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"tt_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">FFHH
+						<vars>
+							<var>temperature
+								<value>135</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ff_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">FFHL
+						<vars>
+							<var>temperature
+								<value>-40</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ff_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">SSLL
+						<vars>
+							<var>temperature
+								<value>-40</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ss_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+					<corner enabled="1">SSLH
+						<vars>
+							<var>temperature
+								<value>135</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">toplevel.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/home/hoangtrang/Thu_vien_PDK/PDK_CRN65LP_v1.7a_Official_IC61_20120914_all/PDK_CRN65LP_v1.7a_Official_IC61_20120914/models/spectre/toplevel.scs</modelfile>
+								<modelsection>"ss_lib"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">Thesis:mod_off:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>mod_off</value>
+							</option>
+							<option>lib
+								<value>Thesis</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Thesis:mod_off:1_none_Interactive.2</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>psd
+								<evalType>point</evalType>
+							</output>
+							<output>enob
+								<evalType>point</evalType>
+							</output>
+							<output>snr
+								<evalType>point</evalType>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>mod_off</value>
+							</option>
+							<option>lib
+								<value>Thesis</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>C
+						<value>820p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc_1
+						<value>528.4f</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>F
+						<value>20K</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LM12345_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LM68_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LM79_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMN8_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMP1_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMP2_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>LMP5_1
+						<value>520n</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>OSR
+						<value>128</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>1k</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WM12345_1
+						<value>2.8u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WM68_1
+						<value>15u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WM79_1
+						<value>9.732u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMN8_1
+						<value>80u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMP1_1
+						<value>9.732u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMP2_1
+						<value>9.732u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>WMP5_1
+						<value>37u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Thesis:mod_off:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<allcornersenabled>1</allcornersenabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Wed Apr 23 03:10:13 2025
+</timestamp>
+			<resultsname>/home/hoangtrang/Thu_vien_PDK/ALL_PDK/Thesis/mod_off/adexl/results/data/Interactive.2.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.2.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/work-eda_hoangtrang_031013523</localpsfdir>
+			<psfdir>/home/disk/simulation/SIM_IC61/Thesis/mod_off/adexl/results/data/Interactive.2</psfdir>
+			<simdir>$AXL_PROJECT_DIR/Thesis/mod_off/adexl/results/data/Interactive.2</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/hoangtrang/Thu_vien_PDK/ALL_PDK/Thesis/mod_off/adexl/results/data/Interactive.2.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.2.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+	</history>
+</setupdb>

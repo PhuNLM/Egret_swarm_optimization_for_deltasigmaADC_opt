@@ -1,0 +1,21 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Apr  4 19:22:26 2025 
+Best design point: 1
+Design specs: 
+	DATN_TEST:1:1	corner	Nominal - 
+	enob_blackman		4.452
+	snr_blackman		28.57
+	enob_rect		1.247
+	snr_rect		9.27
+Design parameters: 
+	C		10n
+	R		1k
+	F		19.38k
+	Gain		450
+
+Interactive.20
+Number of points completed: 2
+Number of simulation errors: 0
+Interactive.20 completed. 
+Current time: Fri Apr  4 19:23:06 2025 

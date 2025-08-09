@@ -1,0 +1,37 @@
+// VerilogA for Thesis, 12bitdac, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module dac12 (vd11, vd10, vd9, vd8, vd7, vd6, vd5, vd4, vd3, vd2, vd1, vd0, vout);
+electrical vd11, vd10, vd9, vd8, vd7, vd6, vd5, vd4, vd3, vd2, vd1, vd0, vout;
+parameter real vref  = 1.2 from [0:inf);
+parameter real trise = 1p from [0:inf);
+parameter real tfall = 1p from [0:inf);
+parameter real tdel  = 1p from [0:inf);
+parameter real vtrans  = 1.2;
+
+    real out_scaled; // output scaled as fraction of 256
+
+    analog begin
+		out_scaled = 0;
+		out_scaled = out_scaled + ((V(vd11) > vtrans) ? 2048 : 0);
+		out_scaled = out_scaled + ((V(vd10) > vtrans) ? 1024 : 0);
+		out_scaled = out_scaled + ((V(vd9) > vtrans) ? 512 : 0);
+		out_scaled = out_scaled + ((V(vd8) > vtrans) ? 256 : 0);
+		out_scaled = out_scaled + ((V(vd7) > vtrans) ? 128 : 0);
+		out_scaled = out_scaled + ((V(vd6) > vtrans) ? 64 : 0);
+		out_scaled = out_scaled + ((V(vd5) > vtrans) ? 32 : 0);
+		out_scaled = out_scaled + ((V(vd4) > vtrans) ? 16 : 0);
+		out_scaled = out_scaled + ((V(vd3) > vtrans) ? 8 : 0);
+		out_scaled = out_scaled + ((V(vd2) > vtrans) ? 4 : 0);
+		out_scaled = out_scaled + ((V(vd1) > vtrans) ? 2 : 0);
+		out_scaled = out_scaled + ((V(vd0) > vtrans) ? 1 : 0);
+		V(vout) <+ transition( vref*out_scaled/8192, tdel, trise, tfall );
+    end
+
+
+endmodule
+
+
+

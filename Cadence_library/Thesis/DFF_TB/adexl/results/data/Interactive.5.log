@@ -1,0 +1,27 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Mar 21 22:22:42 2025 
+Best design point: 1
+Design specs: 
+	Thesis:DFF:1	corner	FFHL - 
+	Q_riseTime		133.5p
+	Qn_riseTime		134.1p
+	Q_fallTime		148.6p
+	Qn_fallTime		138.2p
+	Thesis:DFF:1	corner	FFHH - 
+	Q_riseTime		238.6p
+	Qn_riseTime		191p
+	Q_fallTime		205.3p
+	Qn_fallTime		206p
+	Thesis:DFF:1	corner	Nominal - 
+	Q_riseTime		202.8p
+	Qn_riseTime		157.3p
+	Q_fallTime		166p
+	Qn_fallTime		165.8p
+Design parameters: 
+
+Interactive.5
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.5 completed. 
+Current time: Fri Mar 21 22:23:14 2025 

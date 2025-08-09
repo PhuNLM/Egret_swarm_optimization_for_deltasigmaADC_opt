@@ -1,0 +1,23 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Apr  4 19:34:43 2025 
+Best design point: 1
+Design specs: 
+	20khz	corner	Nominal - 
+	enob_blackman		4.452
+	snr_blackman		28.57
+	enob_rect		1.247
+	snr_rect		9.27
+	10khz	corner	Nominal - 
+	enob_blackman		1.783
+	snr_blackman		12.49
+	enob_rect		1.746
+Design parameters: 
+	C		10n
+	R		1k
+	F		19.38k
+	Gain		450
+
+Received stop signal from user. 
+Interactive.23 completed. 
+Current time: Fri Apr  4 19:36:02 2025 

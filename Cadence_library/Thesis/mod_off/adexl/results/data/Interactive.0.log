@@ -1,0 +1,49 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Apr 18 20:36:07 2025 
+Best design point: 1
+Design specs: 
+	Thesis:mod_off:1	corner	TTNN - 
+	enob		11.94
+	snr		73.66
+	Thesis:mod_off:1	corner	FFHH - 
+	enob		9.615
+	snr		59.65
+	Thesis:mod_off:1	corner	FFHL - 
+	enob		12.75
+	snr		78.53
+	Thesis:mod_off:1	corner	SSLL - 
+	enob		12.75
+	snr		78.53
+	Thesis:mod_off:1	corner	SSLH - 
+	enob		9.615
+	snr		59.65
+	Thesis:mod_off:1	corner	Nominal - 
+	enob		11.99
+	snr		73.95
+Design parameters: 
+	C		820p
+	Cc_1		528.4f
+	F		20k
+	LM12345_1		520n
+	LM68_1		520n
+	LM79_1		520n
+	LMN8_1		520n
+	LMP1_1		520n
+	LMP2_1		520n
+	LMP5_1		520n
+	OSR		128
+	R		1k
+	WM12345_1		2.8u
+	WM68_1		15u
+	WM79_1		9.732u
+	WMN8_1		80u
+	WMP1_1		9.732u
+	WMP2_1		12u
+	WMP5_1		37u
+
+Interactive.0
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.0 completed. 
+Current time: Fri Apr 18 20:46:10 2025 

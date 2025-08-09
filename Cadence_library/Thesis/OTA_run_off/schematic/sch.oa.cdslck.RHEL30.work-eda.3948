@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      hoangtrang
+HostName                       work-eda
+ProcessIdentifier              3948
+ProcessCreationTime_UTC        1748638535
+ProcessCreationTime_Readable   Sat May 31 04:55:35 2025 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/hoangtrang/Thu_vien_PDK/ALL_PDK/Thesis/OTA_run_off/schematic/sch.oa.cdslck
+TimeEditLocked                 Thu Jun  5 11:30:51 2025 CST

@@ -1,0 +1,9 @@
+// VerilogA for Thesis, fir_tb, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module fir_tb;
+
+
+endmodule

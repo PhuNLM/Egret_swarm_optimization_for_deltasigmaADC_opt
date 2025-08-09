@@ -1,0 +1,21 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri May 30 14:46:38 2025 
+Best design point: 1
+Design specs: 
+	Thesis:comp_bound:1	corner	Nominal - 
+Design parameters: 
+	LM12_1		60n
+	LM34_1		60n
+	LM56_1		60n
+	LM7_1		60n
+	LS_1		420n
+	WM12_1		180n
+	WM34_1		180n
+	WM56_1		180n
+	WM7_1		180n
+	WS_1		3u
+
+Received stop signal from user. 
+Interactive.0 completed. 
+Current time: Fri May 30 14:47:01 2025 

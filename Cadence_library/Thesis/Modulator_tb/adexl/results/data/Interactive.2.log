@@ -1,0 +1,18 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Apr  4 17:37:44 2025 
+Best design point: 1
+Design specs: 
+	Thesis:Modulator:1	corner	Nominal - 
+	enob		3.189
+	snr		30.43
+Design parameters: 
+	C		10n
+	R		1k
+	OSR		512
+
+Interactive.2
+Number of points completed: 2
+Number of simulation errors: 0
+Interactive.2 completed. 
+Current time: Fri Apr  4 17:44:45 2025 

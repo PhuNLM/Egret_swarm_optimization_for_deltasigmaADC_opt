@@ -1,0 +1,39 @@
+`include "constants.vams"
+`include "disciplines.vams"
+(* instrument_module *)
+module decimator_order2(vin, vout, vclk);
+input vin, vclk;
+output vout;
+electrical vin, vout, vclk;
+
+parameter integer N=16 from [0:inf);
+parameter real vtrans_clk=0.2;
+parameter real tdel = 1p from [0:inf);
+parameter real trise = 1p from [0:inf);
+parameter real tfall = 1p from [0:inf);
+
+   integer count;
+   real sum1;
+   real sum2;
+   real stage1_out;
+   real vout_val;
+
+   analog begin
+      @(cross(V(vclk) - vtrans_clk, 1.0)) begin
+         // Stage 1: First accumulator
+         sum1 = sum1 + V(vin);
+         count = count + 1;
+
+         if (count == N) begin
+            count = 0;
+            stage1_out = sum1 / N;
+            sum1 = 0.0;
+
+            // Stage 2: Second accumulator
+            sum2 = sum2 + stage1_out;
+            vout_val = sum2 / N;
+         end
+      end
+      V(vout) <+ transition(vout_val, tdel, trise, tfall);
+   end
+endmodule

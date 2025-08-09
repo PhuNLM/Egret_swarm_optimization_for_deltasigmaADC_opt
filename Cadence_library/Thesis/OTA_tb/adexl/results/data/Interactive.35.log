@@ -1,0 +1,41 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon May 19 02:39:46 2025 
+Best design point: 1
+Design specs: 
+	Thesis:OTA_tb:1	corner	Nominal - 
+	MN1_1		2	Yes
+	MN2_1		2	Yes
+	MN3_1		2	Yes
+	MN4_1		2	Yes
+	MN5_1		2	Yes
+	MN7_1		2	Yes
+	MN8_1		2	Yes
+	MN9_1		2	Yes
+	MP1_1		2	Yes
+	MP2_1		2	Yes
+	MP5_1		1	Near
+	MP6_1		2	Yes
+	MP8_1		2	Yes
+Design parameters: 
+	Cc_1		962.3f
+	LM12345_1		523.5n
+	LM68_1		498.2n
+	LM79_1		435.9n
+	LMN8_1		445n
+	LMP1_1		469.9n
+	LMP2_1		447.9n
+	LMP5_1		507.1n
+	WM12345_1		3.179u
+	WM68_1		49.74u
+	WM79_1		14.58u
+	WMN8_1		36.7u
+	WMP1_1		12.09u
+	WMP2_1		11.21u
+	WMP5_1		31.9u
+
+Interactive.35
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.35 completed. 
+Current time: Mon May 19 02:39:57 2025 

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      hoangtrang
+HostName                       work-eda
+ProcessIdentifier              122947
+ProcessCreationTime_UTC        1744776189
+ProcessCreationTime_Readable   Wed Apr 16 12:03:09 2025 CST
+AppIdentifier                  /opt/IC617/tools/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /home/hoangtrang/Thu_vien_PDK/ALL_PDK/DATN/DAC/constraint/prop.cfg
+TimeEditLocked                 Sat Apr 19 11:02:48 2025 CST
